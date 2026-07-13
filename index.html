@@ -1,593 +1,738 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Store - Tài Khoản Premium & Dịch Vụ Social</title>
-  <meta name="description" content="Cung cấp tài khoản Premium (CapCut, ChatGPT, YouTube) chính hãng giá rẻ, dịch vụ tăng tương tác và hỗ trợ mở khóa tài khoản Facebook, TikTok.">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THM XH - Mua Bán Tài Khoản CapCut, ChatGPT | Tăng Tương Tác MXH</title>
+    <meta name="description" content="Mua bán tài khoản CapCut Pro, ChatGPT Plus giá rẻ. Dịch vụ tăng tương tác mạng xã hội uy tín tại thmxh.com. Hỗ trợ 24/7 qua Telegram.">
+    <meta name="keywords" content="tài khoản CapCut, ChatGPT Plus, tăng tương tác, tăng follow, tăng like, thmxh">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="THMXH - Tài Khoản CapCut, ChatGPT | Tăng Tương Tác MXH">
+    <meta property="og:description" content="Mua bán tài khoản CapCut Pro, ChatGPT Plus giá rẻ. Tăng tương tác mạng xã hội uy tín.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://thmxh.com/bio">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            background: #050505;
+            color: #ffffff;
+        }
+        ::-webkit-scrollbar { display: none; }
+
+        /* ===== ALL ANIMATIONS IN STYLE TAG ===== */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px rgba(212,175,55,0.2), 0 0 20px rgba(212,175,55,0.1); }
+            100% { box-shadow: 0 0 15px rgba(212,175,55,0.4), 0 0 40px rgba(212,175,55,0.2); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes rippleAnim {
+            0% { transform: scale(0); opacity: 0.5; }
+            100% { transform: scale(4); opacity: 0; }
+        }
+        @keyframes pulseRing {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+        @keyframes borderDance {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes scanMove {
+            0% { top: -5%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 105%; opacity: 0; }
+        }
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0.3); }
+            50% { box-shadow: 0 0 0 6px rgba(212,175,55,0); }
+        }
+        @keyframes sparkleFly {
+            0% { transform: translate(0, 0) scale(1); opacity: 1; }
+            100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+        }
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(5deg); }
+            75% { transform: translateY(10px) rotate(-3deg); }
+        }
+
+        /* ===== ANIMATED ELEMENTS ===== */
+        .anim-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .anim-d1 { animation-delay: 0.1s; }
+        .anim-d2 { animation-delay: 0.2s; }
+        .anim-d3 { animation-delay: 0.35s; }
+        .anim-d4 { animation-delay: 0.5s; }
+        .anim-d5 { animation-delay: 0.6s; }
+        .anim-d6 { animation-delay: 0.7s; }
+
+        /* ===== GLASS CARD ===== */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.05);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-style: preserve-3d;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(212, 175, 55, 0.25);
+            box-shadow: 0 12px 40px 0 rgba(0,0,0,0.5), inset 0 0 0 1px rgba(212,175,55,0.15), 0 0 30px rgba(212,175,55,0.08);
+        }
+
+        /* ===== GLOW BORDER ===== */
+        .card-glow { position: relative; }
+        .card-glow::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(90deg, #D4AF37, #26A5E4, #D4AF37, #26A5E4);
+            background-size: 300% 300%;
+            animation: borderDance 3s linear infinite;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        .card-glow:hover::before { opacity: 1; }
+
+        /* ===== SHINE SWEEP ===== */
+        .card-shine { position: relative; overflow: hidden; }
+        .card-shine::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -60%;
+            width: 40%; height: 200%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent);
+            transform: skewX(-15deg);
+            transition: left 0.8s ease;
+            pointer-events: none;
+        }
+        .card-shine:hover::after { left: 120%; }
+
+        /* ===== AVATAR ===== */
+        .avatar-wrap { position: relative; }
+        .avatar-ring {
+            background: conic-gradient(from 0deg, #D4AF37, #C5A028, #B08D22, #D4AF37);
+            padding: 3px;
+            animation: glow 2s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 2;
+            border-radius: 50%;
+        }
+        .avatar-pulse1 {
+            position: absolute; inset: -6px;
+            border-radius: 50%;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            animation: pulseRing 2s ease-out infinite;
+            z-index: 1;
+        }
+        .avatar-pulse2 {
+            position: absolute; inset: -12px;
+            border-radius: 50%;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            animation: pulseRing 2s ease-out infinite 0.7s;
+            z-index: 0;
+        }
+
+        /* ===== SHIMMER TEXT ===== */
+        .shimmer-text {
+            background: linear-gradient(90deg, #D4AF37 0%, #fff 25%, #D4AF37 50%, #fff 75%, #D4AF37 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        /* ===== BIO BUTTON ===== */
+        .bio-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .bio-btn .btn-arrow { transition: transform 0.3s ease; }
+        .bio-btn:hover .btn-arrow { transform: translateX(4px); }
+
+        /* ===== RIPPLE ===== */
+        .ripple-box {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            overflow: hidden; border-radius: inherit;
+            pointer-events: none;
+        }
+        .ripple-dot {
+            position: absolute; border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            animation: rippleAnim 0.6s linear;
+            pointer-events: none;
+        }
+
+        /* ===== PARTICLES ===== */
+        .particle {
+            position: absolute;
+            background: rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* ===== MOUSE TRAIL ===== */
+        .trail-dot {
+            position: fixed; border-radius: 50%;
+            pointer-events: none; z-index: 9999;
+            mix-blend-mode: screen;
+        }
+
+        /* ===== SPARKLE ===== */
+        .sparkle { position: fixed; pointer-events: none; z-index: 9999; }
+        .sparkle-p {
+            position: absolute; border-radius: 50%;
+            animation: sparkleFly 0.8s ease-out forwards;
+        }
+
+        /* ===== FLOATING ICONS ===== */
+        .float-icon {
+            position: absolute; opacity: 0.04;
+            pointer-events: none;
+            color: #D4AF37;
+        }
+
+        /* ===== STATUS DOT ===== */
+        .status-dot { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+        /* ===== TAG PILL ===== */
+        .tag-pill {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            border: 1px solid #1C1C1C;
+            color: #a1a1aa;
+        }
+        .tag-pill:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: scale(1.08) translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212,175,55,0.1);
+        }
+
+        /* ===== BG ORB ===== */
+        .bg-orb {
+            position: absolute; border-radius: 50%;
+            filter: blur(80px); pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        /* ===== SCAN LINE ===== */
+        .scan-line {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);
+            animation: scanMove 4s linear infinite;
+            pointer-events: none; filter: blur(1px);
+        }
+
+        /* ===== STAT CARD ===== */
+        .stat-card {
+            transition: all 0.4s ease;
+            position: relative; overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+        .stat-card::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(212,175,55,0.08), transparent 70%);
+            opacity: 0; transition: opacity 0.4s ease;
+        }
+        .stat-card:hover::before { opacity: 1; }
+        .stat-card:hover {
+            border-color: rgba(212,175,55,0.15) !important;
+            transform: translateY(-2px);
+        }
+        .stat-label {
+            color: #71717a;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        /* ===== SUPPORT GLOW ===== */
+        .support-bar { position: relative; }
+        .support-bar::after {
+            content: ''; position: absolute;
+            bottom: 0; left: 10%; right: 10%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+
+        /* ===== BADGE HOT ===== */
+        .badge-hot {
+            animation: badgePulse 2s ease-in-out infinite;
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            background: rgba(212,175,55,0.15);
+            color: #D4AF37;
+        }
+
+        /* ===== TOAST ===== */
+        .toast-box {
+            position: fixed;
+            bottom: 24px; left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            background: rgba(212,175,55,0.2);
+            border: 1px solid rgba(212,175,55,0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .toast-box.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* ===== ICON BOX HOVER ===== */
+        .icon-box {
+            transition: transform 0.3s ease;
+        }
+        .icon-box:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+
+        /* ===== LAYOUT ===== */
+        .bio-main {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 448px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            max-height: 100dvh;
+            justify-content: center;
+            gap: 0;
+        }
+        .btn-inner {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border-radius: 16px;
+            width: 100%;
+        }
+        .btn-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .btn-text-wrap {
+            flex: 1;
+            min-width: 0;
+        }
+        .btn-title {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-desc {
+            color: #71717a;
+            font-size: 12px;
+            margin-top: 2px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .btn-arrow-svg {
+            width: 16px; height: 16px;
+            flex-shrink: 0;
+            color: #71717a;
+            transition: all 0.3s ease;
+        }
+        .bio-btn:hover .btn-arrow-svg { color: #D4AF37; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "THMXH - Bio Link",
+        "description": "Mua bán tài khoản CapCut Pro, ChatGPT Plus. Dịch vụ tăng tương tác mạng xã hội.",
+        "url": "https://thmxh.com/bio"
     }
-  }
-  </script>
-  
-  <style>
-    :root {
-      --bg-primary: #08080c;
-      --bg-card: rgba(18, 18, 28, 0.8);
-      --fg-primary: #f0f0f5;
-      --fg-secondary: #8a8a9a;
-      --accent-cyan: #00e5ff;
-      --accent-purple: #b366ff;
-      --accent-pink: #ff4da6;
-      --accent-gold: #ffd700;
-      --accent-green: #22c55e;
-      --accent-orange: #f97316;
-      --border-color: rgba(255, 255, 255, 0.06);
-    }
-    
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg-primary);
-      color: var(--fg-primary);
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-    
-    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
-    
-    /* Loading Screen */
-    .loading-screen {
-      position: fixed; inset: 0; z-index: 9999;
-      background: var(--bg-primary);
-      display: flex; align-items: center; justify-content: center;
-      transition: opacity 0.4s ease;
-    }
-    .loading-screen.hidden { opacity: 0; pointer-events: none; }
-    .loader {
-      width: 50px; height: 50px;
-      border: 2px solid transparent;
-      border-top-color: var(--accent-cyan);
-      border-right-color: var(--accent-purple);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    
-    /* Background */
-    .bg-mesh {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background: 
-        radial-gradient(ellipse 50% 35% at 10% 10%, rgba(0, 229, 255, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse 45% 30% at 90% 80%, rgba(179, 102, 255, 0.08) 0%, transparent 50%);
-    }
-    
-    /* Glass */
-    .glass {
-      background: var(--bg-card);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--border-color);
-    }
-    
-    /* Buttons */
-    .btn-primary {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 14px 28px;
-      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
-      color: var(--bg-primary);
-      font-weight: 600; border-radius: 12px; border: none; cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      position: relative; overflow: hidden;
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 25px rgba(0, 229, 255, 0.4);
-    }
-    .btn-secondary {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 12px 24px; background: transparent;
-      color: var(--fg-primary); font-weight: 500; border-radius: 10px;
-      border: 1px solid var(--border-color); cursor: pointer;
-      transition: all 0.25s ease;
-    }
-    .btn-secondary:hover { background: rgba(255, 255, 255, 0.04); border-color: var(--accent-cyan); }
-    .btn-zalo { background: linear-gradient(135deg, #0068ff 0%, #00a3ff 100%); color: white; border: none; }
-    
-    /* Ripple */
-    .ripple {
-      position: absolute; border-radius: 50%;
-      background: rgba(255, 255, 255, 0.3);
-      transform: scale(0); animation: ripple 0.6s linear; pointer-events: none;
-    }
-    @keyframes ripple { to { transform: scale(4); opacity: 0; } }
-    
-    /* Typography */
-    .text-gradient {
-      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 50%, var(--accent-pink) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .text-gradient-gold {
-      background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    
-    /* Badges */
-    .badge {
-      display: inline-flex; align-items: center; padding: 6px 14px;
-      font-size: 0.8rem; font-weight: 500; border-radius: 100px;
-      background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.2); color: var(--accent-cyan);
-    }
-    .badge-hot { background: rgba(255, 77, 166, 0.1); border-color: rgba(255, 77, 166, 0.3); color: var(--accent-pink); }
-    .badge-new { background: rgba(179, 102, 255, 0.1); border-color: rgba(179, 102, 255, 0.3); color: var(--accent-purple); }
-    .badge-green { background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.3); color: var(--accent-green); }
-    
-    /* Cards */
-    .card {
-      position: relative; padding: 24px; border-radius: 20px;
-      transition: all 0.35s ease; overflow: hidden;
-    }
-    .card:hover { transform: translateY(-6px); border-color: rgba(255, 255, 255, 0.12); }
-    .card-icon {
-      width: 52px; height: 52px; border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      transition: transform 0.3s ease; margin-bottom: 16px;
-    }
-    .card:hover .card-icon { transform: scale(1.1); }
-    
-    /* Price Tag */
-    .price-tag {
-      font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.75rem;
-      background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    
-    /* Navigation */
-    .nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 14px 0;
-      transition: all 0.3s ease;
-    }
-    .nav.scrolled {
-      background: rgba(8, 8, 12, 0.92); backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-color);
-    }
-    
-    /* Sections */
-    .section { position: relative; z-index: 10; padding: 70px 0; }
-    .hero-section {
-      position: relative; min-height: 100vh; display: flex; align-items: center; padding-top: 70px;
-    }
-    #hero-canvas { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-    
-    /* Animations */
-    .reveal { opacity: 0; transform: translateY(25px); transition: all 0.6s ease; }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-    .stagger > * { opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
-    .stagger.active > *:nth-child(1) { transition-delay: 0.05s; }
-    .stagger.active > *:nth-child(2) { transition-delay: 0.1s; }
-    .stagger.active > *:nth-child(3) { transition-delay: 0.15s; }
-    .stagger.active > *:nth-child(4) { transition-delay: 0.2s; }
-    .stagger.active > * { opacity: 1; transform: translateY(0); }
-    
-    /* Marquee - FIXED */
-    .marquee-wrapper {
-      position: relative; z-index: 10; overflow: hidden; padding: 14px 0;
-      background: linear-gradient(90deg, rgba(8,8,12,1) 0%, rgba(179,102,255,0.05) 50%, rgba(8,8,12,1) 100%);
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .marquee-wrapper::before, .marquee-wrapper::after {
-      content: ''; position: absolute; top: 0; bottom: 0; width: 100px; z-index: 2; pointer-events: none;
-    }
-    .marquee-wrapper::before { left: 0; background: linear-gradient(to right, var(--bg-primary) 0%, transparent 100%); }
-    .marquee-wrapper::after { right: 0; background: linear-gradient(to left, var(--bg-primary) 0%, transparent 100%); }
-    
-    .marquee-track {
-      display: flex; width: max-content;
-      animation: marqueeMove 30s linear infinite;
-    }
-    .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
-    
-    @keyframes marqueeMove {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    
-    .marquee-item {
-      display: inline-flex; align-items: center; gap: 8px; padding: 0 24px;
-      white-space: nowrap; font-size: 0.9rem; color: rgba(255,255,255,0.7);
-    }
-    .marquee-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-    }
-    
-    /* Contact Fixed */
-    .contact-fixed {
-      position: fixed; right: 20px; bottom: 20px; z-index: 900;
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .contact-btn {
-      width: 54px; height: 54px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      border: none; cursor: pointer; transition: all 0.25s ease; color: white;
-    }
-    .contact-btn:hover { transform: scale(1.08); }
-    .contact-btn.zalo { background: linear-gradient(135deg, #0068ff 0%, #00a3ff 100%); box-shadow: 0 4px 20px rgba(0, 163, 255, 0.35); }
-    
-    /* Utils */
-    .pulse-dot { animation: pulse 2s ease-in-out infinite; }
-    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.1); } }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .section { padding: 50px 0; }
-      .card { padding: 20px; }
-      .contact-fixed { right: 16px; bottom: 16px; }
-      .contact-btn { width: 50px; height: 50px; }
-    }
-  </style>
+    </script>
 </head>
+
 <body>
-  <!-- Loading -->
-  <div class="loading-screen" id="loading"><div class="loader"></div></div>
-  
-  <!-- Background -->
-  <div class="bg-mesh"></div>
-  
-  <!-- Nav -->
-  <nav class="nav" id="nav">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 flex items-center justify-center">
-          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <span class="text-lg font-bold">Premium Store</span>
-      </a>
-      <div class="hidden md:flex items-center gap-6">
-        <a href="#products" class="text-sm text-gray-400 hover:text-white transition-colors">Tài khoản</a>
-        <a href="#boost" class="text-sm text-gray-400 hover:text-white transition-colors">Tăng tương tác</a>
-        <a href="#services" class="text-sm text-gray-400 hover:text-white transition-colors">Hỗ trợ</a>
-        <a href="#pricing" class="text-sm text-gray-400 hover:text-white transition-colors">Bảng giá</a>
-      </div>
-      <a href="https://zalo.me/0528254840" target="_blank" class="btn-zalo btn-secondary text-sm py-2.5 px-5 rounded-lg font-medium">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.566-4.458c.537-.194 1.006.131.832.939z"/></svg>
-        <span class="hidden sm:inline">Zalo</span>
-      </a>
-    </div>
-  </nav>
-  
-  <!-- Hero -->
-  <section class="hero-section">
-    <canvas id="hero-canvas"></canvas>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full relative z-10">
-      <div class="text-center max-w-3xl mx-auto">
-        <div class="reveal">
-          <div class="flex flex-wrap justify-center gap-2 mb-5">
-            <span class="badge">Chính Hãng</span>
-            <span class="badge badge-hot">Giá Rẻ</span>
-            <span class="badge badge-green">Hỗ Trợ 24/7</span>
-          </div>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-5">
-            Tài khoản <span class="text-gradient">Premium</span> & Dịch vụ Social
-          </h1>
-          <p class="text-base sm:text-lg text-gray-400 mb-6 max-w-xl mx-auto">
-            CapCut Pro, YouTube Premium, ChatGPT Plus + Tăng tương tác & Mở khóa tài khoản Facebook, TikTok
-          </p>
-          <div class="flex flex-wrap justify-center gap-3 mb-8">
-            <a href="https://zalo.me/0528254840" target="_blank" class="btn-primary" onclick="createRipple(event)">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.566-4.458c.537-.194 1.006.131.832.939z"/></svg>
-              <span>Liên hệ Zalo</span>
-            </a>
-            <a href="#boost" class="btn-secondary">
-              <span>Tăng tương tác</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Marquee -->
-  <div class="marquee-wrapper">
-    <div class="marquee-track">
-      <!-- Duplicate content for seamless loop -->
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-cyan-400 font-medium">CapCut Pro</span> - 30k/tháng</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-red-400 font-medium">YouTube Premium</span> - 29k/tháng</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-green-400 font-medium">ChatGPT Plus</span> - 69k/tháng</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-blue-400 font-medium">Canva Edu</span> - 99k/năm</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-purple-400 font-medium">Tăng Like/View</span> - thmxh.com</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-pink-400 font-medium">Mở khóa FB/TikTok</span> - Hỗ trợ 24/7</span>
-      <!-- Duplicate -->
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-cyan-400 font-medium">CapCut Pro</span> - 30k/tháng</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-red-400 font-medium">YouTube Premium</span> - 29k/tháng</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-green-400 font-medium">ChatGPT Plus</span> - 69k/tháng</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-blue-400 font-medium">Canva Edu</span> - 99k/năm</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-purple-400 font-medium">Tăng Like/View</span> - thmxh.com</span>
-      <span class="marquee-item"><span class="marquee-dot"></span><span class="text-pink-400 font-medium">Mở khóa FB/TikTok</span> - Hỗ trợ 24/7</span>
-    </div>
-  </div>
 
-  <!-- Products -->
-  <section id="products" class="section">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-10 reveal">
-        <span class="badge mb-3 inline-block">Tài khoản Premium</span>
-        <h2 class="text-3xl md:text-4xl font-bold mb-3">Tài khoản <span class="text-gradient">chính hãng</span></h2>
-        <p class="text-gray-400 text-sm">Bảo hành trọn thời gian sử dụng - Active trong 5 phút</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 stagger" id="products-grid"></div>
+    <!-- Background -->
+    <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
+        <div class="bg-orb" style="width:300px;height:300px;background:rgba(212,175,55,0.06);top:-10%;right:-5%;animation-delay:0s;"></div>
+        <div class="bg-orb" style="width:250px;height:250px;background:rgba(38,165,224,0.04);bottom:-8%;left:-8%;animation-delay:3s;"></div>
+        <div class="bg-orb" style="width:150px;height:150px;background:rgba(212,175,55,0.03);top:40%;left:50%;animation-delay:5s;"></div>
+        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;"></div>
+        <div class="scan-line"></div>
+        <div class="float-icon" style="top:8%;left:10%;font-size:28px;animation:floatIcon 12s 0s ease-in-out infinite;">✦</div>
+        <div class="float-icon" style="top:15%;right:12%;font-size:22px;animation:floatIcon 10s 2s ease-in-out infinite;">◆</div>
+        <div class="float-icon" style="bottom:20%;left:8%;font-size:18px;animation:floatIcon 14s 4s ease-in-out infinite;">⬡</div>
+        <div class="float-icon" style="bottom:12%;right:10%;font-size:24px;animation:floatIcon 11s 1s ease-in-out infinite;">✧</div>
+        <div class="float-icon" style="top:50%;left:3%;font-size:20px;animation:floatIcon 13s 3s ease-in-out infinite;">◇</div>
+        <div id="particles" style="position:absolute;inset:0;"></div>
     </div>
-  </section>
-  
-  <!-- Boost Services -->
-  <section id="boost" class="section" style="background: linear-gradient(180deg, transparent, rgba(0, 229, 255, 0.03), transparent);">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-10 reveal">
-        <span class="badge badge-hot mb-3 inline-block">Tăng tương tác</span>
-        <h2 class="text-3xl md:text-4xl font-bold mb-3">Tăng <span class="text-gradient">Like, View, Follow</span></h2>
-        <p class="text-gray-400 text-sm max-w-xl mx-auto">Tăng tương tác Facebook, TikTok, Instagram, YouTube giá rẻ - Tự động qua thmxh.com</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 stagger" id="boost-grid"></div>
-      <div class="text-center reveal">
-        <a href="https://thmxh.com" target="_blank" class="btn-primary" onclick="createRipple(event)">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-          <span>Truy cập thmxh.com</span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Services (Unlock) -->
-  <section id="services" class="section">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-10 reveal">
-        <span class="badge badge-new mb-3 inline-block">Hỗ trợ tài khoản</span>
-        <h2 class="text-3xl md:text-4xl font-bold mb-3">Mở khóa & <span class="text-gradient">Khôi phục</span></h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger" id="services-grid"></div>
-    </div>
-  </section>
+    <div id="trailBox"></div>
+    <div id="sparkleBox"></div>
 
-  <!-- Pricing -->
-  <section id="pricing" class="section">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-10 reveal">
-        <span class="badge mb-3 inline-block">Bảng giá</span>
-        <h2 class="text-3xl md:text-4xl font-bold mb-3">Giá <span class="text-gradient-gold">ưu đãi</span></h2>
-      </div>
-      <div class="overflow-x-auto">
-        <table class="w-full min-w-[500px]">
-          <thead><tr class="border-b border-white/10">
-              <th class="text-left py-4 px-4 text-sm font-medium text-gray-400">Sản phẩm</th>
-              <th class="text-left py-4 px-4 text-sm font-medium text-gray-400">Thời hạn</th>
-              <th class="text-right py-4 px-4 text-sm font-medium text-gray-400">Giá</th>
-              <th class="text-right py-4 px-4 text-sm font-medium text-gray-400">Thao tác</th>
-          </tr></thead>
-          <tbody id="pricing-table"></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="py-10 border-t border-white/5 relative z-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-      <p class="text-gray-400 text-sm mb-4">Zalo: <a href="https://zalo.me/0528254840" class="text-cyan-400 hover:underline">0528.254.840</a> | Web: <a href="https://thmxh.com" class="text-purple-400 hover:underline">thmxh.com</a></p>
-      <p class="text-gray-500 text-xs">2024 Premium Store. Mọi quyền được bảo lưu.</p>
-    </div>
-  </footer>
+    <!-- MAIN CONTENT -->
+    <main class="bio-main">
 
-  <!-- Contact Fixed -->
-  <div class="contact-fixed">
-    <a href="https://zalo.me/0528254840" target="_blank" class="contact-btn zalo" aria-label="Zalo">
-      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.566-4.458c.537-.194 1.006.131.832.939z"/></svg>
-    </a>
-  </div>
-
-  <script type="module">
-    import * as THREE from 'three';
-    
-    // ===== DATA =====
-    const products = [
-      { name: "CapCut Pro", price: "30k", period: "1 tháng", icon: "video", color: "pink", desc: "Full tính năng, không watermark", featured: true },
-      { name: "YouTube Premium", price: "29k", period: "1 tháng", icon: "youtube", color: "red", desc: "Không quảng cáo, background play" },
-      { name: "ChatGPT Plus", price: "69k", period: "1 tháng", icon: "chat", color: "green", desc: "GPT-4, DALL-E, Code Interpreter" },
-      { name: "Canva Edu", price: "99k", period: "1 năm", icon: "design", color: "blue", desc: "Full tính năng" },
-      { name: "Gemini Pro", price: "125k", period: "1 năm", icon: "gemini", color: "purple", desc: "Google AI" },
-      { name: "Grok Super", price: "189k", period: "1 tháng", icon: "grok", color: "orange", desc: "xAI" }
-    ];
-
-    const boostServices = [
-      { name: "Like Facebook", icon: "like", color: "blue", desc: "Page, bài viết" },
-      { name: "Follow TikTok", icon: "follow", color: "pink", desc: "Follower thật" },
-      { name: "View YouTube", icon: "view", color: "red", desc: "View thật" },
-      { name: "Follow Insta", icon: "instagram", color: "purple", desc: "Organic" },
-      { name: "View TikTok", icon: "tiktok", color: "cyan", desc: "Vào xu hướng" },
-      { name: "Comment", icon: "comment", color: "green", desc: "Tùy chỉnh" },
-      { name: "Share/Live", icon: "share", color: "orange", desc: "Mắt xem live" },
-      { name: "Member Group", icon: "group", color: "yellow", desc: "Tăng thành viên" }
-    ];
-
-    const services = [
-      { name: "Mở khóa Facebook", desc: "Checkpoint, khóa 30-180 ngày", icon: "unlock", color: "blue", urgent: true },
-      { name: "Mở khóa TikTok", desc: "Khóa 0 following, live", icon: "unlock", color: "pink", urgent: true },
-      { name: "Khôi phục bị hack", desc: "FB, TikTok bị hack", icon: "shield", color: "green", urgent: true },
-      { name: "Xóa acc bị hack", desc: "Xóa account không lấy lại được", icon: "trash", color: "red" },
-      { name: "Xóa acc mạo danh", desc: "Report clone, giả mạo", icon: "user-x", color: "orange" },
-      { name: "Kháng nghị", desc: "BM, Ads bị vô hiệu hóa", icon: "file", color: "purple" }
-    ];
-    
-    const iconSVGs = {
-      video: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>',
-      youtube: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>',
-      chat: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>',
-      design: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>',
-      gemini: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>',
-      grok: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>',
-      unlock: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"/>',
-      shield: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>',
-      trash: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>',
-      'user-x': '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7zm8-4l-4 4m0-4l4 4"/>',
-      file: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>',
-      like: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>',
-      follow: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>',
-      view: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>',
-      instagram: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>',
-      tiktok: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>',
-      comment: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>',
-      share: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>',
-      group: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>'
-    };
-    const colorMap = {
-      pink: 'from-pink-500/15 to-pink-500/5 text-pink-400',
-      red: 'from-red-500/15 to-red-500/5 text-red-400',
-      green: 'from-green-500/15 to-green-500/5 text-green-400',
-      blue: 'from-blue-500/15 to-blue-500/5 text-blue-400',
-      purple: 'from-purple-500/15 to-purple-500/5 text-purple-400',
-      orange: 'from-orange-500/15 to-orange-500/5 text-orange-400',
-      cyan: 'from-cyan-500/15 to-cyan-500/5 text-cyan-400',
-      yellow: 'from-yellow-500/15 to-yellow-500/5 text-yellow-400'
-    };
-
-    // ===== RENDER FUNCTIONS =====
-    function render(id, data, isService = false, isBoost = false) {
-      const el = document.getElementById(id);
-      if(!el) return;
-      
-      if(id === 'products-grid') {
-        el.innerHTML = data.map(p => `
-          <div class="card glass ${p.featured ? 'border-pink-500/30' : ''}">
-            ${p.featured ? '<div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-gradient-to-r from-purple-500 to-pink-500 text-xs font-semibold">Hot</div>' : ''}
-            <div class="card-icon bg-gradient-to-br ${colorMap[p.color].split(' ')[0]}"><svg class="w-6 h-6 ${colorMap[p.color].split(' ')[1]}" fill="none" stroke="currentColor" viewBox="0 0 24 24">${iconSVGs[p.icon]}</svg></div>
-            <h3 class="font-semibold mb-1">${p.name}</h3>
-            <p class="text-xs text-gray-400 mb-4">${p.desc}</p>
-            <div class="flex items-end justify-between">
-              <div><span class="price-tag">${p.price}</span><span class="text-xs text-gray-400">/${p.period}</span></div>
-              <a href="https://zalo.me/0528254840" target="_blank" class="text-xs px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-1">Mua<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        <!-- Avatar -->
+        <header class="anim-up anim-d1" style="display:flex;flex-direction:column;align-items:center;margin-bottom:clamp(12px,2vh,20px);">
+            <div class="avatar-wrap" style="margin-bottom:12px;width:fit-content;">
+                <div class="avatar-pulse2"></div>
+                <div class="avatar-pulse1"></div>
+                <div class="avatar-ring">
+                    <div style="width:80px;height:80px;border-radius:50%;overflow:hidden;background:#121212;">
+                        <img src="https://picsum.photos/seed/thmxh-bio/200/200.jpg" alt="THM XH" style="width:100%;height:100%;object-fit:cover;" loading="eager">
+                    </div>
+                </div>
             </div>
-          </div>
-        `).join('');
-      } else if(id === 'boost-grid') {
-        el.innerHTML = data.map(s => `
-          <div class="card glass">
-            <div class="card-icon bg-gradient-to-br ${colorMap[s.color].split(' ')[0]}" style="width:44px;height:44px;"><svg class="w-5 h-5 ${colorMap[s.color].split(' ')[1]}" fill="none" stroke="currentColor" viewBox="0 0 24 24">${iconSVGs[s.icon]}</svg></div>
-            <h4 class="font-medium text-sm mb-1">${s.name}</h4>
-            <p class="text-xs text-gray-400">${s.desc}</p>
-          </div>
-        `).join('');
-      } else if(id === 'services-grid') {
-        el.innerHTML = data.map(s => `
-          <div class="card glass">
-            ${s.urgent ? '<div class="absolute top-3 right-3 w-2 h-2 rounded-full bg-red-500 pulse-dot"></div>' : ''}
-            <div class="card-icon bg-gradient-to-br ${colorMap[s.color].split(' ')[0]}" style="width:56px;height:56px;"><svg class="w-7 h-7 ${colorMap[s.color].split(' ')[1]}" fill="none" stroke="currentColor" viewBox="0 0 24 24">${iconSVGs[s.icon]}</svg></div>
-            <h3 class="font-semibold mb-2">${s.name}</h3>
-            <p class="text-sm text-gray-400 mb-5">${s.desc}</p>
-            <a href="https://zalo.me/0528254840" target="_blank" class="text-sm ${colorMap[s.color].split(' ')[1]} font-medium hover:opacity-80 transition-opacity flex items-center gap-2">Liên hệ<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
-          </div>
-        `).join('');
-      } else if(id === 'pricing-table') {
-        el.innerHTML = data.map(p => `
-          <tr class="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
-            <td class="py-4 px-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gradient-to-br ${colorMap[p.color].split(' ')[0]} flex items-center justify-center"><svg class="w-4 h-4 ${colorMap[p.color].split(' ')[1]}" fill="none" stroke="currentColor" viewBox="0 0 24 24">${iconSVGs[p.icon]}</svg></div><span class="font-medium">${p.name}</span></div></td>
-            <td class="py-4 px-4 text-gray-400 text-sm">${p.period}</td>
-            <td class="py-4 px-4 text-right"><span class="text-gradient-gold font-bold">${p.price}</span></td>
-            <td class="py-4 px-4 text-right"><a href="https://zalo.me/0528254840" target="_blank" class="text-xs px-3 py-1.5 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 transition-colors">Mua</a></td>
-          </tr>
-        `).join('');
-      }
-    }
+            <h1 style="font-size:clamp(20px,5vw,24px);font-weight:600;color:#fff;letter-spacing:-0.025em;display:flex;align-items:center;gap:8px;">
+                THM XH
+                <span class="status-dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#10b981;"></span>
+            </h1>
+            <p style="color:#a1a1aa;font-size:14px;font-weight:300;margin-top:4px;text-align:center;line-height:1.625;">
+                Tài khoản Premium giá tốt · Tăng tương tác MXH
+            </p>
+        </header>
 
-    // ===== THREE.JS =====
-    let scene, camera, renderer, particles;
-    const clock = new THREE.Clock();
-    
-    function init3D() {
-      const canvas = document.getElementById('hero-canvas');
-      if(!canvas) return;
-      scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-      camera.position.z = 40;
-      renderer = new THREE.WebGLRenderer({canvas, alpha: true});
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      
-      const geo = new THREE.BufferGeometry();
-      const count = 80;
-      const pos = new Float32Array(count*3);
-      const colors = new Float32Array(count*3);
-      const palette = [new THREE.Color(0x00e5ff), new THREE.Color(0xb366ff), new THREE.Color(0xff4da6)];
-      
-      for(let i=0; i<count; i++){
-        pos[i*3] = (Math.random()-0.5)*80;
-        pos[i*3+1] = (Math.random()-0.5)*80;
-        pos[i*3+2] = (Math.random()-0.5)*30;
-        const c = palette[Math.floor(Math.random()*3)];
-        colors[i*3]=c.r; colors[i*3+1]=c.g; colors[i*3+2]=c.b;
-      }
-      geo.setAttribute('position', new THREE.BufferAttribute(pos,3));
-      geo.setAttribute('color', new THREE.BufferAttribute(colors,3));
-      
-      const mat = new THREE.PointsMaterial({size: 1.2, vertexColors: true, transparent: true, opacity: 0.6, blending: THREE.AdditiveBlending});
-      particles = new THREE.Points(geo, mat);
-      scene.add(particles);
-      animate();
-      window.addEventListener('resize', () => { camera.aspect = window.innerWidth/window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight); });
-    }
-    
-    function animate() {
-      requestAnimationFrame(animate);
-      const t = clock.getElapsedTime();
-      if(particles) {
-        particles.rotation.y = t*0.05;
-        particles.rotation.x = t*0.03;
-      }
-      renderer.render(scene, camera);
-    }
-    
-    // ===== INIT =====
-    document.addEventListener('DOMContentLoaded', () => {
-      init3D();
-      render('products-grid', products);
-      render('boost-grid', boostServices);
-      render('services-grid', services);
-      render('pricing-table', products);
-      
-      // Scroll reveal
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
-      }, {threshold: 0.1});
-      document.querySelectorAll('.reveal, .stagger').forEach(el => obs.observe(el));
-      
-      // Nav scroll
-      window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40); });
-      
-      // Loading
-      setTimeout(() => { document.getElementById('loading').classList.add('hidden'); }, 500);
-    });
-    
-    // Ripple
-    window.createRipple = function(e) {
-      const btn = e.currentTarget;
-      const r = document.createElement('span');
-      r.className = 'ripple';
-      r.style.width = r.style.height = Math.max(btn.clientWidth, btn.clientHeight) + 'px';
-      r.style.left = e.clientX - btn.getBoundingClientRect().left - r.clientWidth/2 + 'px';
-      r.style.top = e.clientY - btn.getBoundingClientRect().top - r.clientHeight/2 + 'px';
-      btn.appendChild(r);
-      setTimeout(() => r.remove(), 600);
-    };
-  </script>
+        <!-- Tags -->
+        <div class="anim-up anim-d2" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:clamp(12px,2vh,18px);">
+            <span class="tag-pill">✦ CapCut Pro</span>
+            <span class="tag-pill">✦ ChatGPT Plus</span>
+            <span class="tag-pill">✦ Tăng Follow</span>
+            <span class="tag-pill">✦ Tăng Like</span>
+        </div>
+
+        <!-- Buttons -->
+        <nav class="anim-up anim-d3" style="width:100%;display:flex;flex-direction:column;gap:12px;margin-bottom:clamp(10px,1.5vh,16px);" aria-label="Liên kết nhanh">
+
+            <!-- Telegram Bot -->
+            <a href="https://web.telegram.org/k/#@taikhoanch_bot" target="_blank" rel="noopener noreferrer" class="bio-btn glass-card card-glow card-shine" data-magnetic onclick="doRipple(event);doSparkle(event);">
+                <div class="ripple-box"></div>
+                <div class="btn-inner">
+                    <div class="btn-icon icon-box" style="background:linear-gradient(135deg,rgba(38,165,224,0.25),rgba(38,165,224,0.05));">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#26A5E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4z"/><path d="m22 2-11 11"/></svg>
+                    </div>
+                    <div class="btn-text-wrap">
+                        <div class="btn-title">
+                           BOT Mua Tài Khoản 
+                            <span class="badge-hot">HOT</span>
+                        </div>
+                        <div class="btn-desc">CapCut Pro · ChatGPT Plus · Canva · Spotify...</div>
+                    </div>
+                    <svg class="btn-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </div>
+            </a>
+
+            <!-- THMXH.com -->
+            <a href="https://thmxh.com" target="_blank" rel="noopener noreferrer" class="bio-btn glass-card card-shine" data-magnetic onclick="doRipple(event);doSparkle(event);">
+                <div class="ripple-box"></div>
+                <div class="btn-inner">
+                    <div class="btn-icon icon-box" style="background:linear-gradient(135deg,rgba(212,175,55,0.25),rgba(212,175,55,0.05));">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                    </div>
+                    <div class="btn-text-wrap">
+                        <div class="btn-title">Tăng Tương Tác MXH</div>
+                        <div class="btn-desc">thmxh.com · Follow · Like · View · Share</div>
+                    </div>
+                    <svg class="btn-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                </div>
+            </a>
+
+        </nav>
+
+        <!-- Stats -->
+        <div class="anim-up anim-d4" style="width:100%;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:clamp(10px,1.5vh,16px);">
+            <div class="stat-card">
+                <div class="shimmer-text" style="font-size:18px;font-weight:600;" id="stat1">0</div>
+                <div class="stat-label">Khách hàng</div>
+            </div>
+            <div class="stat-card">
+                <div class="shimmer-text" style="font-size:18px;font-weight:600;" id="stat2">0</div>
+                <div class="stat-label">Đơn thành công</div>
+            </div>
+            <div class="stat-card">
+                <div class="shimmer-text" style="font-size:18px;font-weight:600;" id="stat3">0</div>
+                <div class="stat-label">Đánh giá 5★</div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="anim-up anim-d5" style="width:100%;margin-bottom:clamp(8px,1vh,12px);">
+            <div style="height:1px;background:linear-gradient(to right,transparent,rgba(255,255,255,0.08),transparent);"></div>
+        </div>
+
+        <!-- Support -->
+        <footer class="anim-up anim-d6" style="width:100%;">
+            <div class="glass-card support-bar" style="border-radius:16px;padding:12px 16px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <div class="icon-box" style="width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(212,175,55,0.1);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                        </div>
+                        <div>
+                            <div style="font-size:12px;font-weight:500;color:#fff;">Hỗ trợ trực tuyến</div>
+                            <div style="font-size:10px;color:#71717a;display:flex;align-items:center;gap:4px;">
+                                <span class="status-dot" style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#10b981;"></span>
+                                Đang hoạt động
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <a href="https://t.me/thmxh_support" target="_blank" rel="noopener noreferrer" class="bio-btn" style="background:linear-gradient(135deg,rgba(38,165,224,0.3),rgba(38,165,224,0.1));border:1px solid rgba(38,165,224,0.2);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:500;color:#fff;transition:all 0.3s ease;" onmouseenter="this.style.transform='scale(1.05)'" onmouseleave="this.style.transform='scale(1)'" onclick="doRipple(event)" aria-label="Liên hệ Telegram">
+                            <div class="ripple-box"></div>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="#26A5E4" stroke="none" style="display:inline;vertical-align:middle;margin-right:4px;"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            Telegram
+                        </a>
+                        <button onclick="copyLink()" class="bio-btn" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:500;color:#a1a1aa;transition:all 0.3s ease;cursor:pointer;" onmouseenter="this.style.transform='scale(1.05)';this.style.color='#fff'" onmouseleave="this.style.transform='scale(1)';this.style.color='#a1a1aa'" aria-label="Sao chép link">
+                            <div class="ripple-box"></div>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:4px;"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            <span id="copyText">Copy</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Toast -->
+    <div class="toast-box" id="toast">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span id="toastMsg">Đã sao chép!</span>
+    </div>
+
+    <script>
+        // ===== COUNTER =====
+        function animateCounter(el, target) {
+            var start = performance.now();
+            var dur = 2000;
+            function ease(t) { return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
+            function tick(now) {
+                var p = Math.min((now - start) / dur, 1);
+                var v = Math.floor(ease(p) * target);
+                el.textContent = target >= 1000 ? (v / 1000).toFixed(1).replace('.0', '') + 'K+' : v + '+';
+                if (p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+        }
+        setTimeout(function() {
+            animateCounter(document.getElementById('stat1'), 5200);
+            animateCounter(document.getElementById('stat2'), 15800);
+            animateCounter(document.getElementById('stat3'), 4300);
+        }, 1200);
+
+        // ===== RIPPLE =====
+        function doRipple(e) {
+            var btn = e.currentTarget;
+            var box = btn.querySelector('.ripple-box');
+            if (!box) return;
+            var r = btn.getBoundingClientRect();
+            var s = Math.max(r.width, r.height);
+            var d = document.createElement('span');
+            d.className = 'ripple-dot';
+            d.style.width = d.style.height = s + 'px';
+            d.style.left = (e.clientX - r.left - s / 2) + 'px';
+            d.style.top = (e.clientY - r.top - s / 2) + 'px';
+            box.appendChild(d);
+            setTimeout(function() { d.remove(); }, 600);
+        }
+
+        // ===== SPARKLE =====
+        function doSparkle(e) {
+            var box = document.getElementById('sparkleBox');
+            var colors = ['#D4AF37', '#ffffff', '#26A5E4', '#C5A028'];
+            for (var i = 0; i < 12; i++) {
+                var wrap = document.createElement('div');
+                wrap.className = 'sparkle';
+                var angle = (Math.PI * 2 / 12) * i;
+                var dist = 30 + Math.random() * 40;
+                var p = document.createElement('div');
+                p.className = 'sparkle-p';
+                p.style.background = colors[Math.floor(Math.random() * colors.length)];
+                p.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+                p.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+                var sz = 2 + Math.random() * 4;
+                p.style.width = sz + 'px';
+                p.style.height = sz + 'px';
+                wrap.style.left = e.clientX + 'px';
+                wrap.style.top = e.clientY + 'px';
+                wrap.appendChild(p);
+                box.appendChild(wrap);
+                (function(w) { setTimeout(function() { w.remove(); }, 800); })(wrap);
+            }
+        }
+
+        // ===== MAGNETIC =====
+        var magBtns = document.querySelectorAll('[data-magnetic]');
+        for (var i = 0; i < magBtns.length; i++) {
+            (function(btn) {
+                btn.addEventListener('mousemove', function(e) {
+                    var r = btn.getBoundingClientRect();
+                    var x = e.clientX - r.left - r.width / 2;
+                    var y = e.clientY - r.top - r.height / 2;
+                    var rx = -(y / r.height) * 8;
+                    var ry = (x / r.width) * 8;
+                    btn.style.transform = 'translate(' + (x * 0.15) + 'px,' + (y * 0.15) + 'px) perspective(800px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+                });
+                btn.addEventListener('mouseleave', function() {
+                    btn.style.transform = 'translate(0,0) perspective(800px) rotateX(0) rotateY(0)';
+                });
+            })(magBtns[i]);
+        }
+
+        // ===== MOUSE TRAIL =====
+        var trailBox = document.getElementById('trailBox');
+        var dots = [];
+        var mx = -100, my = -100;
+        for (var i = 0; i < 8; i++) {
+            var d = document.createElement('div');
+            d.className = 'trail-dot';
+            var sz = 6 - i * 0.6;
+            d.style.width = sz + 'px';
+            d.style.height = sz + 'px';
+            d.style.background = 'rgba(212,175,55,' + (0.4 - i * 0.04) + ')';
+            d.style.left = '-100px';
+            d.style.top = '-100px';
+            trailBox.appendChild(d);
+            dots.push({ el: d, x: -100, y: -100 });
+        }
+        document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; });
+        function trailLoop() {
+            var px = mx, py = my;
+            for (var i = 0; i < dots.length; i++) {
+                var spd = 0.3 - i * 0.02;
+                dots[i].x += (px - dots[i].x) * spd;
+                dots[i].y += (py - dots[i].y) * spd;
+                dots[i].el.style.left = dots[i].x + 'px';
+                dots[i].el.style.top = dots[i].y + 'px';
+                dots[i].el.style.transform = 'translate(-50%,-50%) scale(' + (1 - i * 0.08) + ')';
+                px = dots[i].x;
+                py = dots[i].y;
+            }
+            requestAnimationFrame(trailLoop);
+        }
+        trailLoop();
+
+        // ===== PARTICLES =====
+        (function() {
+            var c = document.getElementById('particles');
+            for (var i = 0; i < 25; i++) {
+                var p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.top = Math.random() * 100 + '%';
+                p.style.opacity = Math.random() * 0.4 + 0.1;
+                var s = Math.random() * 2 + 1;
+                p.style.width = s + 'px';
+                p.style.height = s + 'px';
+                p.style.animation = 'float ' + (Math.random() * 10 + 10) + 's ' + (Math.random() * 5) + 's ease-in-out infinite';
+                c.appendChild(p);
+            }
+        })();
+
+        // ===== PARALLAX ORBS =====
+        document.addEventListener('mousemove', function(e) {
+            var x = (e.clientX / window.innerWidth - 0.5) * 30;
+            var y = (e.clientY / window.innerHeight - 0.5) * 30;
+            var orbs = document.querySelectorAll('.bg-orb');
+            for (var i = 0; i < orbs.length; i++) {
+                var f = (i + 1) * 0.6;
+                orbs[i].style.transform = 'translate(' + (x * f) + 'px,' + (y * f) + 'px)';
+            }
+        });
+
+        // ===== COPY =====
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(function() {
+                showToast('Đã sao chép link bio!');
+                var ct = document.getElementById('copyText');
+                ct.textContent = 'Done!';
+                setTimeout(function() { ct.textContent = 'Copy'; }, 2000);
+            }).catch(function() { showToast('Không thể sao chép'); });
+        }
+        function showToast(msg) {
+            var t = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            t.classList.add('show');
+            setTimeout(function() { t.classList.remove('show'); }, 2500);
+        }
+
+        // ===== TAG SPARKLE =====
+        var tags = document.querySelectorAll('.tag-pill');
+        for (var i = 0; i < tags.length; i++) {
+            tags[i].addEventListener('click', function(e) { doSparkle(e); });
+        }
+    </script>
+
 </body>
 </html>
